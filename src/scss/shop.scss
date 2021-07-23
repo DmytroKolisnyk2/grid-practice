@@ -20,11 +20,8 @@
 .shop__item {
   position: relative;
   transition: $main-animation;
-  &:hover .shop__img {
-    z-index: -1;
-  }
-  &:hover {
-    background: linear-gradient(0deg, rgba(100,194,158,0.8701681356136204) 100%, rgba(100,194,158,1) 100%);
+  &:hover .shop__overlay {
+    opacity: 1;
   }
   &:hover .shop__btn {
     opacity: 1;
@@ -33,6 +30,16 @@
     width: 100%;
     height: 100%;
   }
+}
+.shop__overlay {
+  opacity: 0;
+  background: linear-gradient(0deg, rgba(100, 194, 158, 0.8701681356136204) 100%, rgba(100, 194, 158, 1) 100%);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: $main-animation;
 }
 .shop__btn {
   opacity: 0;
@@ -51,7 +58,7 @@
   transition: $main-animation;
   cursor: pointer;
   &:hover {
-    color: #282f35;
+    text-decoration: underline;
   }
   &::before {
     content: "";
