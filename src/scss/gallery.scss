@@ -1,0 +1,124 @@
+.gallery {
+  display: grid;
+  // width: 100%;
+  margin: 0 auto;
+  grid-template: repeat(9, 200px) / repeat(auto-fill, minmax(300px, 533px));
+  max-width: 1600px;
+  justify-content: center;
+  @media screen and (max-width: 1200px) {
+    // grid-template: repeat(9, 200px) / repeat(auto-fit, minmax(300px, 300px));
+  }
+}
+
+.card {
+  // height: 100%;
+  grid-row: span 2;
+  background-color: #fff;
+  text-align: center;
+  padding: 60px 0 0;
+  // align-self: start;
+  &::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    bottom: -10px;
+    left: calc(50% - 10px);
+    position: absolute;
+
+    z-index: 2;
+  }
+}
+.card__img {
+  margin-bottom: 28px;
+}
+.card__headline {
+  text-transform: uppercase;
+  padding-bottom: 25px;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: $main-font;
+  color: $headline-color;
+}
+
+.card__text {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: $main-font;
+  color: $text-color;
+  line-height: 1.4;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: justify;
+  &::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    background-color: $text-color;
+    margin: 40px auto;
+  }
+}
+.gallery__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.gallery__ico {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.gallery__item {
+  // display: inline-block;
+  position: relative;
+}
+.gallery__item--img {
+  picture {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.gallery__item--middle {
+  grid-row: span 3;
+}
+.gallery__item--big {
+  grid-column: span 2;
+  grid-row: span 3;
+  min-width: 300px;
+}
+.discover {
+  padding: 75px 0;
+  background-color: #282f35;
+  &__btn {
+    font-size: 14px;
+    font-weight: 700;
+    font-family: $main-font;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid white;
+    transition: $main-animation;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 300px;
+    height: 50px;
+    &:hover {
+      color: #282f35;
+      background-color: white;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+.generation {
+  padding: 117px 0 143px 0;
+  text-align: center;
+  background-color: #fff;
+}
+.generation__headline {
+  text-transform: uppercase;
+  padding-bottom: 35px;
+  font-size: 18pt;
+  font-weight: 700;
+  font-family: $main-font;
+  color: $headline-color;
+}
+.generation__img {
+  margin-bottom: 34px;
+}
+.generation__text {
+  margin: 0;
+  font-size: 14pt;
+  line-height: 1.6;
+  font-weight: 400;
+  font-family: $main-font;
+  color: $text-color;
+  line-height: 1.2;
+}
+.generation__wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1080px;
+}

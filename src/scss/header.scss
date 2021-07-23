@@ -1,0 +1,51 @@
+.header {
+  position: absolute;
+  background-color: transparent;
+  width: 100%;
+  height: 140px;
+  padding-top: 35px;
+}
+.menu {
+  padding: 0;
+  width: 100%;
+  max-width: 630px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  & picture {
+    @media screen and (max-width: 520px) {
+      display: none;
+    }
+  }
+}
+.menu__item {
+}
+.menu__link {
+  font-size: 13pt;
+  font-weight: 700;
+  font-family: $main-font;
+  color: $headline-color;
+  text-transform: uppercase;
+  transition: $main-animation;
+  letter-spacing: 1px;
+  &:hover {
+    color: $hover-color;
+  }
+}
+.menu__logo {
+}
+.menu__wrapper {
+}
+.start {
+  width: 100%;
+  // min-height: 800px;
+  min-height: 100vh;
+  background: url(../img/bg_bike.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main{
+  background-color: #282f35;
+}
