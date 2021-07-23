@@ -4,6 +4,7 @@
   grid-template: repeat(2, 267px) / repeat(6, 267px);
   margin: 0 auto;
   justify-content: center;
+  
 }
 .shop__item--big-row {
   grid-column: span 2;
@@ -33,7 +34,7 @@
 }
 .shop__overlay {
   opacity: 0;
-  background: linear-gradient(0deg, rgba(100, 194, 158, 0.8701681356136204) 100%, rgba(100, 194, 158, 1) 100%);
+  background: linear-gradient(0deg, rgba(100, 194, 158, 0.75) 100%, rgba(100, 194, 158, 0.75) 100%);
   height: 100%;
   width: 100%;
   position: absolute;

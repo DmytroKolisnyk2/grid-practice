@@ -2,11 +2,45 @@
   display: grid;
   // width: 100%;
   margin: 0 auto;
-  grid-template: repeat(9, 200px) / repeat(auto-fill, minmax(300px, 533px));
+  grid-template: repeat(9, 200px) / repeat(3, minmax(300px, 533px));
   max-width: 1600px;
   justify-content: center;
   @media screen and (max-width: 1200px) {
-    // grid-template: repeat(9, 200px) / repeat(auto-fit, minmax(300px, 300px));
+    grid-template: repeat(13, 200px) / repeat(2, minmax(250px, 1fr));
+  }
+  @media screen and (max-width: 570px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  & div:nth-child(4) {
+    @media screen and (min-width: 1200px) {
+      &::after {
+        bottom: -10px;
+      }
+    }
+    @media screen and (min-width: 570px) {
+      &::after {
+        top: -10px;
+      }
+    }
+    @media screen and (max-width: 570px) {
+      order: 4;
+    }
+  }
+  & div:nth-child(5) {
+    @media screen and (max-width: 570px) {
+      order: 6;
+    }
+  }
+  & div:nth-child(6) {
+    @media screen and (max-width: 570px) {
+      order: 5;
+    }
+  }
+  & div:nth-child(8) {
+    @media screen and (max-width: 570px) {
+      order: 8;
+    }
   }
 }
 
@@ -15,7 +49,7 @@
   grid-row: span 2;
   background-color: #fff;
   text-align: center;
-  padding: 60px 0 0;
+  padding: 60px 16px 0;
   // align-self: start;
   &::after {
     content: "";
@@ -62,6 +96,9 @@
     background-color: $text-color;
     margin: 40px auto;
   }
+  @media screen and (max-width: 1200px) {
+    font-size: 14px;
+  }
 }
 .gallery__img {
   position: absolute;
@@ -78,7 +115,6 @@
   transform: translate(-50%, -50%);
 }
 .gallery__item {
-  // display: inline-block;
   position: relative;
 }
 .gallery__item--img {
@@ -90,11 +126,48 @@
 
 .gallery__item--middle {
   grid-row: span 3;
+  @media screen and (max-width: 1200px) {
+    grid-row: span 1.5;
+  }
+  @media screen and (max-width: 570px) {
+    height: 400px;
+    width: 50%;
+    order: 10;
+  }
 }
 .gallery__item--big {
   grid-column: span 2;
   grid-row: span 3;
   min-width: 300px;
+  @media screen and (max-width: 570px) {
+    height: 400px;
+    width: 100%;
+  }
+}
+.gallery__item--small {
+  @media screen and (max-width: 1200px) {
+    &-black {
+      grid-area: 4/2/5/3;
+      @media screen and (max-width: 570px) {
+        height: 200px;
+        width: 100%;
+        order: 5;
+      }
+    }
+    &-red {
+      grid-area: 6/1/7/2;
+      @media screen and (max-width: 570px) {
+        height: 200px;
+        width: 100%;
+        order: 3;
+      }
+    }
+  }
+  @media screen and (max-width: 570px) {
+    height: 200px;
+    width: 100%;
+    order: 8;
+  }
 }
 .discover {
   padding: 75px 0;

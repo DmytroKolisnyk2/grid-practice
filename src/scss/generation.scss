@@ -2,6 +2,10 @@
   padding: 117px 0 143px 0;
   text-align: center;
   background-color: #fff;
+  @media screen and (max-width: 768px) {
+      padding: 87px 0 103px 0;
+
+  }
 }
 .generation__headline {
   text-transform: uppercase;
@@ -22,6 +26,9 @@
   font-family: $main-font;
   color: $text-color;
   line-height: 1.2;
+  @media screen and (max-width: 768px) {
+    font-size: 12pt;
+  }
 }
 .generation__wrapper {
   margin: 0 auto;
