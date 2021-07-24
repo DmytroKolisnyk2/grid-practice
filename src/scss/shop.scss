@@ -12,12 +12,17 @@
 }
 .shop__item--big-row {
   grid-column: span 2;
+  @media screen and (max-width: 540px) {
+    width: 100%;
+  }
 }
 .shop__item--big-column {
   grid-row: span 2;
 }
 
 .shop__img {
+  width: 100%;
+  height: 100%;
   transition: $main-animation;
   object-fit: cover;
   position: relative;
@@ -25,6 +30,7 @@
 .shop__item {
   position: relative;
   transition: $main-animation;
+
   &:hover .shop__overlay {
     opacity: 1;
   }
